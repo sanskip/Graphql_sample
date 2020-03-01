@@ -1,0 +1,11 @@
+extend type Query {
+	emps:[Emp] 
+}
+
+type Emp {
+	id: Int, 
+	employee_name: String, 
+	employee_salary: String, 
+	employee_age: String, 
+	profile_image: String
+}

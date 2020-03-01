@@ -1,0 +1,11 @@
+extend type Query {
+  authors: [Author],
+  author(id: Int!): Author
+}
+
+type Author {
+  id: Int!
+  firstName: String
+  lastName: String
+  posts: [Post]
+}

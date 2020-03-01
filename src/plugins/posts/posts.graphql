@@ -1,0 +1,23 @@
+extend type Query {
+     posts: [Post],
+     post(id: Int!):Post
+  }
+# composition
+type Post {
+  id: Int!
+  title: String
+  author: Author 
+}
+
+extend type Mutation {
+  addPost(input: PostInput): Post
+  updatePost(id: Int! ,authorId :Int,title:String): Post
+  deletePost(id: Int!): [Post]
+}
+
+
+input PostInput {
+  authorId: Int!
+  title: String!
+}
+
